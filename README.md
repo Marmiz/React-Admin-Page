@@ -1,6 +1,13 @@
 ## Admin page in react
 #### A study project made following Cory House's React course on Pluralsight.
 
+---
+
+Still a Work in Progress for the
+**100DaysOfCode** challenge.
+
+To know more about it visit
+[100DaysOfCode Repo](https://github.com/Marmiz/100-days-of-code) or [Twitter](https://twitter.com/_100DaysOfCode) page.
 
 ---
 ###### This repo contain:
