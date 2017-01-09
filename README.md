@@ -25,6 +25,6 @@
 
 A big thanks to Cory House and his course on React on Pluralsight.
 
-###### Check the course [here](https://app.pluralsight.com/library/courses/react-flux-building-applications/table-of-contents) and his [pluralsight](https://www.pluralsight.com/authors/cory-house) profile for more content.
+#### Check the course [here](https://app.pluralsight.com/library/courses/react-flux-building-applications/table-of-contents) and his [pluralsight](https://www.pluralsight.com/authors/cory-house) profile for more content.
 
 :blue_heart:
