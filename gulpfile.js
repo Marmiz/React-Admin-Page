@@ -35,7 +35,9 @@ gulp.task('connect', function() {
     root: ['dist'],
     port: config.port,
     base: config.devBaseUrl,
-    livereload: true
+    livereload: true,
+    defaultFile: 'src/index.html',  //added for browserHistory functionality
+    fallback: 'src/index.html',    //so that on reload react-router will handle the routing
   })
 });
 

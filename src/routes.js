@@ -22,8 +22,7 @@ var routes = (
     <Route path="/" component={App}>
       <IndexRoute component={HomePage} />
       <Route path="authors" component={Authors} />
-      <Route path="about"
-        component={AboutPage} />
+      <Route path="about" component={AboutPage} />
     </Route>
   </Router>
 );
