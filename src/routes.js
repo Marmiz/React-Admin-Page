@@ -15,7 +15,7 @@ var HomePage = require('./components/homePage');
 var Authors = require('./components/authors/authorPage');
 // var ManageAuthorPage = require('./components/authors/manageAuthorPage');
 var AboutPage = require('./components/about/aboutPage');
-// var NotFoundPage = require('./components/notFoundPage');
+var FourOFour = require('./components/common/404');
 
 var routes = (
   <Router history={browserHistory}>
@@ -23,6 +23,7 @@ var routes = (
       <IndexRoute component={HomePage} />
       <Route path="authors" component={Authors} />
       <Route path="about" component={AboutPage} />
+      <Route path="*" component={FourOFour} />
     </Route>
   </Router>
 );
