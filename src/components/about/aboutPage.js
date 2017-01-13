@@ -7,7 +7,7 @@ var About = React.createClass({
     return (
       <div>
         <h1>About</h1>
-        <p>
+        <div>
           This app uses the following:
           <ul>
             <li>Rect</li>
@@ -16,7 +16,7 @@ var About = React.createClass({
             <li>Flux</li>
             <li>And many more!</li>
           </ul>
-        </p>
+        </div>
       </div>
     );
   }

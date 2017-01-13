@@ -13,7 +13,7 @@ var Route = require('react-router').Route;
 var App = require('./components/app');
 var HomePage = require('./components/homePage');
 var Authors = require('./components/authors/authorPage');
-// var ManageAuthorPage = require('./components/authors/manageAuthorPage');
+var ManageAuthorPage = require('./components/authors/manageAuthorPage');
 var AboutPage = require('./components/about/aboutPage');
 var FourOFour = require('./components/common/404');
 
@@ -22,6 +22,7 @@ var routes = (
     <Route path="/" component={App}>
       <IndexRoute component={HomePage} />
       <Route path="authors" component={Authors} />
+      <Route path="author" component={ManageAuthorPage} />
       <Route path="about" component={AboutPage} />
       <Route path="*" component={FourOFour} />
     </Route>
