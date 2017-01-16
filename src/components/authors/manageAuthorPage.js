@@ -1,12 +1,29 @@
 "use strict";
 
 var React = require('react');
+var AuthorForm = require('./AuthorForm');
 
 var ManageAuthorPage = React.createClass({
+  // since this is my top-level component
+  // here's where we handle change into form
+  getInitialState: function () {
+    return {
+      author: {id: '', firstName: '', lastName: ''}
+    }
+  },
+  // check and update
+  setAuthorState: function(event) {
+    var field = event.target.name;
+    var value = event.target.value;
+    this.state.author[field] = value;
+    return this.setState({author: this.state.author});
+  },
   render: function() {
     return (
       <div>
-        <h1>Manage Authors</h1>
+        <AuthorForm
+          author={this.state.author}
+          onChange={this.setAuthorState} />
       </div>
     );
   }
