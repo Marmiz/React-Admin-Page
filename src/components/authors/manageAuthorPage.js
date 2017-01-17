@@ -8,7 +8,8 @@ var ManageAuthorPage = React.createClass({
   // here's where we handle change into form
   getInitialState: function () {
     return {
-      author: {id: '', firstName: '', lastName: ''}
+      author: {id: '', firstName: '', lastName: ''},
+      errors: {},
     }
   },
   // check and update
@@ -23,7 +24,8 @@ var ManageAuthorPage = React.createClass({
       <div>
         <AuthorForm
           author={this.state.author}
-          onChange={this.setAuthorState} />
+          onChange={this.setAuthorState}
+          errors={this.state.errors} />
       </div>
     );
   }
