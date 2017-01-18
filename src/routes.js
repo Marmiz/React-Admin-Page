@@ -23,6 +23,7 @@ var routes = (
       <IndexRoute component={HomePage} />
       <Route path="authors" component={Authors} />
       <Route path="author" component={ManageAuthorPage} />
+      <Route path="author/:id" component={ManageAuthorPage} />
       <Route path="about" component={AboutPage} />
       <Route path="*" component={FourOFour} />
     </Route>
