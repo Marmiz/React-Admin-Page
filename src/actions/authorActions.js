@@ -16,6 +16,15 @@ var AuthorActions = {
 			author: newAuthor
 		});
 	},
+
+  updateAuthor: function(author) {
+  var updatedAuthor = AuthorApi.saveAuthor(author);
+
+  Dispatcher.dispatch({
+    actionType: ActionTypes.UPDATE_AUTHOR,
+    author: updatedAuthor
+  });
+},
 }
 
 

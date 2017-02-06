@@ -33,11 +33,15 @@ var AuthorStore = assign({}, EventEmitter.prototype, {
 		return _.find(_authors, {id: id});
 	}
 
-}));
+});
 
 Dispatcher.register(function(action) {
   // create a switch for every action implemented
   switch(action.actionType) {
+    case ActionTypes.INITIALIZE:
+			_authors = action.initialData.authors;
+			AuthorStore.emitChange();
+			break;
 
     // when action data is registered, push the new author data
     // into our author private array
@@ -50,6 +54,6 @@ Dispatcher.register(function(action) {
 
   }
 
-}));
+});
 
 module.exports = AuthorStore;

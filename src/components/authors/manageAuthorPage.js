@@ -3,9 +3,11 @@
 var React = require('react');
 var ReactRouter = require('react-router');
 var browserHistory = ReactRouter.browserHistory; //for programmatic redirects
-var AuthorForm = require('./AuthorForm');
-var AuthorApi = require('../../api/authorApi');
+var AuthorForm = require('./authorForm');
+var AuthorActions = require('../../actions/authorActions');
+var AuthorStore = require('../../stores/authorStore');
 var toastr = require('toastr');
+// var AuthorApi = require('../../api/authorApi');
 
 var ManageAuthorPage = React.createClass({
   // since this is my top-level component
@@ -29,6 +31,14 @@ var ManageAuthorPage = React.createClass({
       dirty: false
     }
   },
+
+  componentWillMount: function() {
+		var authorId = this.props.params.id; //from the path '/author:id'
+		if (authorId) {
+			this.setState({author: AuthorStore.getAuthorById(authorId) });
+		}
+	},
+
   // check and update
   setAuthorState: function(event) {
     this.setState({dirty: true});
@@ -64,6 +74,12 @@ var ManageAuthorPage = React.createClass({
     if (!this.authorFormIsValid()) {
       return;
     }
+
+    if (this.state.author.id) {
+			AuthorActions.updateAuthor(this.state.author);
+		} else {
+			AuthorActions.createAuthor(this.state.author);
+		}
 
     this.setState({dirty: false}, function() {
 			toastr.success('Author saved.');

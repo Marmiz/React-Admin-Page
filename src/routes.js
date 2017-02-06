@@ -6,7 +6,7 @@ var Router = ReactRouter.Router;
 var browserHistory = ReactRouter.browserHistory;
 var IndexRoute = ReactRouter.IndexRoute;
 var Route = require('react-router').Route;
-// var Redirect = ReactRouter.Redirect;
+var Redirect = ReactRouter.Redirect;
 
 
 // Components
