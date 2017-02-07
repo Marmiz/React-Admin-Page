@@ -14,6 +14,9 @@ var AuthorPage = React.createClass({
 		};
 	},
 
+// this 3 event listener are the one that reflects the changing from the stores
+// to the UI. Without those the API call is made, but no change is reflected
+// on the screen.
 	componentWillMount: function() {
 		AuthorStore.addChangeListener(this._onChange);
 	},
@@ -24,6 +27,7 @@ var AuthorPage = React.createClass({
 	},
 
 	_onChange: function() {
+		debugger; //4: reflect the change on the UI
 		this.setState({ authors: AuthorStore.getAllAuthors() });
 	},
 
